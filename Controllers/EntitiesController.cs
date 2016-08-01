@@ -16,6 +16,7 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Sesam.Templates.CustomDataSource.Controllers
 {    
@@ -42,7 +43,7 @@ namespace Sesam.Templates.CustomDataSource.Controllers
                     if (reader.TokenType == JsonToken.StartObject)
                     {
                         // Load each object from the stream and parse it into dynamic
-                        var obj = JsonSerializer.Create().Deserialize<dynamic>(reader);
+                        var obj = JsonSerializer.Create().Deserialize<JObject>(reader);
 
                         // YOUR CODE GOES HERE
                     }
