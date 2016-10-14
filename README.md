@@ -11,7 +11,7 @@ To run locally:
 
 To build the docker image:
 
-    docker build . -t a-good-name
+    docker build -t a-good-name .
 
 To run the docker image:
 
